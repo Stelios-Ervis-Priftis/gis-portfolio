@@ -16,7 +16,7 @@ The site is a static React application with no backend, CMS, client-side router,
 
 ## Prerequisites
 
-Use Node.js 24 LTS and npm. Netlify is pinned to Node 24. The production build has also been verified with Node 26.13.0.
+Use Node.js 26 LTS and npm 11 or later. Netlify is pinned to Node 26. The production build has been verified with Node 26.13.0.
 
 ## Local development
 
@@ -110,7 +110,7 @@ netlify.toml            Netlify build and response headers
 
 - Build command: `npm run build`
 - Publish directory: `dist`
-- Node version: `24`
+- Node version: `26`
 - Long-lived immutable caching for hashed files under `/assets/`
 - Conservative security and referrer headers for all routes
 

@@ -115,7 +115,7 @@ Before reporting completion:
 ## Project Overview and Current State
 
 - **Purpose:** Single-page professional portfolio for Stelios-Ervis Priftis, presenting GIS/Earth observation projects, experience, skills, contact details, and a downloadable CV.
-- **Stack:** React 19, TypeScript 6, Vite 8, Tailwind CSS 4 via `@tailwindcss/vite`, self-hosted Space Grotesk via Fontsource, ESLint 10, npm. Netlify uses Node 24; local production verification also used Node 26.13.0.
+- **Stack:** React 19, TypeScript 6, Vite 8, Tailwind CSS 4 via `@tailwindcss/vite`, self-hosted Space Grotesk via Fontsource, ESLint 10, npm. Netlify uses Node 26; local production verification also used Node 26.13.0.
 - **Implemented:** Six responsive sections; typed content modules; local project screenshots and illustrative imagery; working social, project, and CV links; Netlify contact form with honeypot and accessible feedback; document metadata; favicon and robots.txt; Netlify static-build configuration; GitHub issue and PR templates.
 - **Not implemented:** No custom backend, CMS, client-side routing, analytics, automated test suite, canonical production URL, or deployed site in this repository's current workflow.
 - **Task boundaries:** Owner content belongs in `src/content/`; rendering belongs in `src/components/` and `src/sections/`. Never modify the separate structural-reference repository `stelios-priftis-portfolio-new` for this project.
@@ -169,7 +169,7 @@ npm run preview        # Serve the production build
 ## Environments and Configuration
 
 - No environment variables are required for local development, builds, or Netlify.
-- Netlify is configured with Node 24, `npm run build`, and `dist` in `netlify.toml`.
+- Netlify is configured with Node 26, `npm run build`, and `dist` in `netlify.toml`.
 - This is a public static client application; never place secrets in source, `public/`, or Vite environment values.
 
 ## External Services and Test Isolation
