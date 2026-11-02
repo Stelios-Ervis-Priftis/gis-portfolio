@@ -1,0 +1,44 @@
+name: Bug report
+description: Report broken layout, accessibility, links, or site behavior
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for checking the portfolio. Please include enough detail to reproduce the problem.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the actual behavior and what you expected instead.
+      placeholder: The project preview overflows on my phone when...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open...
+        2. Scroll to...
+        3. Observe...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      description: Include browser version, operating system, device, and viewport width if relevant.
+      placeholder: Safari 26, iOS 26, iPhone 15
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Affected URL or section
+      placeholder: https://... or #projects
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or console errors
+      description: Add evidence when available. Do not include private information.

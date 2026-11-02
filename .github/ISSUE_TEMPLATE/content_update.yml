@@ -1,0 +1,44 @@
+name: Content or project update
+description: Request a project, experience, skills, personal information, or CV update
+title: "[Content]: "
+labels: [content]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Content area
+      options:
+        - Featured project
+        - Experience
+        - Skills
+        - Personal information or About
+        - CV or other asset
+        - Metadata or links
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current content
+      description: Quote the existing text or identify the item to change.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed content
+      description: Provide the exact replacement text, dates, metrics, and technology details.
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: Links and assets
+      description: Include verified live URLs and note any screenshots or CV files to replace.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Verification
+      options:
+        - label: I confirmed the facts and URLs and did not include confidential information.
+          required: true

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.firecrawl/
+.superpowers/
+.DS_Store
+*.local
+*.log
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
