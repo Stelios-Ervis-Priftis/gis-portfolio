@@ -481,29 +481,35 @@ h3 {
 
 .about-section {
   padding-top: 40px;
+  padding-bottom: 64px;
+}
+
+.about-section .section-heading h2 {
+  max-width: none;
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  line-height: 1.05;
 }
 
 .about-copy {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40px;
-  margin: 64px 0 0 278px;
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  gap: 16px;
+  margin: 40px 0 0 278px;
 }
 
 .about-copy p {
   margin: 0;
+  padding: 20px 0;
   color: #344c47;
+  border-top: 1px solid #c6d0c7;
+  background: transparent;
   font-size: 1.03rem;
   line-height: 1.85;
 }
 
-.about-copy p:first-child::first-letter {
-  float: left;
-  margin: 8px 10px 0 0;
-  color: #0d5a4c;
-  font-family: 'Space Grotesk Variable', 'Avenir Next', 'Segoe UI', sans-serif;
-  font-size: 4.6rem;
-  line-height: .7;
+#projects {
+  padding-top: 96px;
 }
 
 .project-list {
@@ -890,19 +896,27 @@ h3 {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 40px 28px;
   margin-top: 72px;
 }
 
 .skill-group {
-  grid-column: span 2;
+  grid-column: auto;
   padding-top: 18px;
   border-top: 2px solid #173230;
 }
 
 .skill-group:nth-child(-n + 2) {
-  grid-column: span 3;
+  grid-column: auto;
+}
+
+@media (min-width: 641px) {
+  .skill-group:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 14px);
+    justify-self: center;
+  }
 }
 
 .skill-group h3 {
