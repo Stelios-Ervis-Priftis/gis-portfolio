@@ -73,12 +73,12 @@ Production project images live in `src/assets/projects/`; supplied source origin
 4. Keep decorative images' `alt` empty when the adjacent project content provides the same information. Add meaningful alternative text only if a screenshot conveys information not available elsewhere.
 5. Check desktop and mobile rendering and confirm that no external image requests are required.
 
-Ember Lens is a special case: `src/components/EmberLensCompare.tsx` combines `ember-lens-pre-fire.webp` and `ember-lens-post-fire.webp` using a native range input. Pre-fire appears left of the divider and post-fire right. Keep the range label/value text, keyboard/touch behavior, visible focus, and shared muted/resting and original-color interaction styles intact.
+Ember Lens is a special case: `src/components/EmberLensCompare.tsx` combines `ember-lens-pre-fire.webp` and `ember-lens-post-fire.webp` using a native range input. Pre-fire appears left of the divider and post-fire right. Keep the range label/value text, keyboard/touch behavior, and visible focus intact. Images display in their original colors without hover color or zoom effects.
 
 ### Hero typography and Ljubljana map
 
 - Space Grotesk is self-hosted through `@fontsource-variable/space-grotesk` and imported in `src/main.tsx`; display typography is themed in `src/index.css`.
-- `src/assets/ljubljana-map.webp` is a local, optimized OpenStreetMap mosaic centered on Ljubljana, preloaded in `index.html`. The Hero applies the palette treatment, coordinate marker, and cartographic overlays in `src/sections/Hero.tsx`.
+- `src/assets/ljubljana-map.webp` is a local, optimized OpenStreetMap mosaic centered on Ljubljana, preloaded in `index.html`. The Hero applies coordinate labels and cartographic overlays in `src/sections/Hero.tsx` while preserving the image’s original colors.
 - Keep the visible `© OpenStreetMap contributors` and `Humanitarian OpenStreetMap Team` attribution links when changing the map. Do not replace the local asset with runtime tile requests.
 
 ### Replace the CV
