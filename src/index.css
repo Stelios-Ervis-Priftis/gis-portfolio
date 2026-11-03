@@ -211,15 +211,13 @@ h3 {
 }
 
 .eyebrow::before {
-  width: 18px;
-  height: 18px;
-  flex: 0 0 18px;
-  background:
-    linear-gradient(#0d5a4c, #0d5a4c) center / 100% 1px no-repeat,
-    linear-gradient(#0d5a4c, #0d5a4c) center / 1px 100% no-repeat;
-  border: 1px solid #0d5a4c;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  background-color: currentColor;
+  mask: url('./assets/coordinate-axes.svg') center / contain no-repeat;
   content: '';
+  pointer-events: none;
 }
 
 .hero h1 {
@@ -942,13 +940,6 @@ h3 {
 
 .contact-section .eyebrow {
   color: #a8c8b7;
-}
-
-.contact-section .eyebrow::before {
-  border-color: #a8c8b7;
-  background:
-    linear-gradient(#a8c8b7, #a8c8b7) center / 100% 1px no-repeat,
-    linear-gradient(#a8c8b7, #a8c8b7) center / 1px 100% no-repeat;
 }
 
 .contact-inner h2 {
