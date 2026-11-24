@@ -90,9 +90,18 @@ h3 {
   position: sticky;
   z-index: 20;
   top: 0;
+  opacity: 1;
   border-bottom: 1px solid rgb(23 50 48 / 14%);
   background: rgb(237 239 236 / 92%);
   backdrop-filter: blur(16px);
+  transform: translateY(0);
+  transition: transform 450ms cubic-bezier(.2, .7, .2, 1), opacity 450ms ease;
+  will-change: transform, opacity;
+}
+
+.site-header-hidden {
+  opacity: 0;
+  transform: translateY(-100%);
 }
 
 .header-inner,
@@ -1341,6 +1350,18 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .site-header,
+  .site-header-hidden {
+    opacity: 1;
+    animation: none;
+    transform: none;
+    transition: none;
+  }
+
+  .header-inner {
+    animation: none;
   }
 
   *,
