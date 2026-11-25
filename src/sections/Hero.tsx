@@ -47,10 +47,6 @@ export function Hero() {
             fetchPriority="high"
           />
           <svg className="hero-map-overlay" viewBox="0 0 620 620" fill="none">
-            <g className="map-grid" stroke="currentColor" opacity=".16">
-              <path d="M0 77.5h620M0 155h620M0 232.5h620M0 310h620M0 387.5h620M0 465h620M0 542.5h620" />
-              <path d="M77.5 0v620M155 0v620M232.5 0v620M310 0v620M387.5 0v620M465 0v620M542.5 0v620" />
-            </g>
             <path d="M98 116 519 501" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 10" strokeLinecap="round" opacity=".6" />
           </svg>
           <span className="map-label map-label-top">46.0569° N</span>
