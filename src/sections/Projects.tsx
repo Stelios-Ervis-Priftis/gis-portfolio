@@ -1,4 +1,6 @@
+import { Fragment } from 'react'
 import { ProjectCard } from '../components/ProjectCard'
+import { SectionDivider } from '../components/SectionDivider'
 import { SectionHeading } from '../components/SectionHeading'
 import { projects } from '../content/projects'
 
@@ -12,8 +14,11 @@ export function Projects() {
         id="projects-title"
       />
       <div className="project-list">
-        {projects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
+        {projects.map((project, index) => (
+          <Fragment key={project.slug}>
+            {index > 0 ? <SectionDivider className="section-divider--project" /> : null}
+            <ProjectCard project={project} />
+          </Fragment>
         ))}
       </div>
     </section>

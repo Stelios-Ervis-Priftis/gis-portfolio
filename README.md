@@ -85,6 +85,16 @@ Ember Lens is a special case: `src/components/EmberLensCompare.tsx` combines `em
 
 Replace `public/stelios-ervis-priftis-cv.pdf` with the new PDF using the same filename. The existing download links will then serve the updated file. If the filename changes, also update `personal.cv.href` in `src/content/personal.ts`.
 
+## Layout and section separators
+
+Horizontal rules between content blocks come from one component, not from borders on the blocks themselves.
+
+- `src/components/SectionDivider.tsx` renders a decorative, `aria-hidden` `<hr>`. Place it as a sibling between sections in `src/App.tsx` and between project cards in `src/sections/Projects.tsx`.
+- `--section-space` in `src/index.css` is the shared vertical spacing token. `.section-divider--shell` owns the margin between sections; `.section-divider--project` separates project cards inside the Projects list, and `.section-divider--footer` separates Contact from the footer.
+- The Hero/About divider adds the `section-divider--flush-top` modifier, which only sets `margin-top: 0`.
+
+Do not reintroduce section-shell, section-heading, or project-card border separators: they duplicate the divider and double the visual spacing. Borders inside the Experience timeline and the Skills groups are internal styling, not section separators, and remain unchanged.
+
 ## Project structure
 
 ```text
